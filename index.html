@@ -7,13 +7,15 @@
   body {
     background-image: url('/image.webp');
     background-size: cover;
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
   }
   .container {
+    background-color: rgba(255, 255, 255, 0.8);
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 10px;
   }
   .title {
     font-size: 2em;
@@ -45,11 +47,12 @@
   .section h2 {
     font-size: 1.5em;
   }
-  .chart {
-    display: none;
+  .skills div {
+    margin-bottom: 10px;
+    cursor: pointer;
   }
-  .chart.active {
-    display: block;
+  .skills div:hover {
+    text-decoration: underline;
   }
 </style>
 <title>Althaf Ali Khan (AK)</title>
@@ -64,21 +67,21 @@
     <h2>About</h2>
     <p>I am AK. A Human and a Engineer.</p>
     <p>Passionate about learning new technologies if I find that as interesting and explore more about it.</p>
-    <p>SRE and Devops Engineer who loves play with Automation and loves pipelines:-)</p>
+    <p>SRE and Devops Engineer who loves to play with automation and adores pipelines:-)</p>
   </div>
 
   <div class="section">
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill" data-skill="Languages" data-rating="Python (3), Shell Scripting (4)">Languages</div>
+      <div data-rating="Python (3), Shell Scripting (4)">Languages</div>
     </div>
   </div>
 </div>
 
 <script>
   document.querySelector('.skills').addEventListener('mouseover', function(e) {
-    if (e.target.classList.contains('skill')) {
-      const rating = e.target.getAttribute('data-rating');
+    const rating = e.target.getAttribute('data-rating');
+    if (rating) {
       alert(`Rating: ${rating}`);
     }
   });
