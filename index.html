@@ -5,31 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
-    background-image: url('/image.webp');
-    background-size: cover;
-    color: black;
+    background-color: #4B5320; /* Army green background */
+    color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
   }
   .container {
-    background-color: rgba(255, 255, 255, 0.8);
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
+    text-align: center;
+  }
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .menu li {
+    float: right;
+  }
+  .menu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .menu li a:hover, .menu li a:focus {
+    background-color: #111;
+  }
+  .dropdown {
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .title, .subtitle, .button, .section {
+    margin-bottom: 20px;
   }
   .title {
     font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
   }
   .subtitle {
     font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 20px;
   }
   .button {
-    display: block;
-    margin: 0 auto;
     padding: 10px 20px;
     font-size: 1em;
     background-color: #28a745;
@@ -41,40 +83,53 @@
   .button:hover {
     background-color: #218838;
   }
-  .section {
-    margin-bottom: 20px;
-  }
   .section h2 {
     font-size: 1.5em;
   }
   .skills div {
     margin-bottom: 10px;
     cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid white;
   }
   .skills div:hover {
-    text-decoration: underline;
+    background-color: #f1f1f1;
+    color: black;
   }
 </style>
 <title>Althaf Ali Khan (AK)</title>
 </head>
 <body>
+<ul class="menu">
+  <li><div class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Menu</a>
+    <div class="dropdown-content">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </div></li>
+</ul>
+
 <div class="container">
   <div class="title">Althaf Ali Khan (AK)</div>
   <div class="subtitle">Human | Engineer | Linuxian | Devops</div>
   <button class="button">EXPLORE ME</button>
 
-  <div class="section">
+  <div class="section" id="about">
     <h2>About</h2>
     <p>I am AK. A Human and a Engineer.</p>
     <p>Passionate about learning new technologies if I find that as interesting and explore more about it.</p>
     <p>SRE and Devops Engineer who loves to play with automation and adores pipelines:-)</p>
   </div>
 
-  <div class="section">
+  <div class="section" id="skills">
     <h2>Skills</h2>
     <div class="skills">
       <div data-rating="Python (3), Shell Scripting (4)">Languages</div>
     </div>
+    <div id="rating" style="margin-top: 10px;"></div>
   </div>
 </div>
 
@@ -82,8 +137,12 @@
   document.querySelector('.skills').addEventListener('mouseover', function(e) {
     const rating = e.target.getAttribute('data-rating');
     if (rating) {
-      alert(`Rating: ${rating}`);
+      document.getElementById('rating').textContent = `Rating: ${rating}`;
     }
+  });
+
+  document.querySelector('.skills').addEventListener('mouseout', function(e) {
+    document.getElementById('rating').textContent = '';
   });
 </script>
 </body>
