@@ -180,6 +180,8 @@
 
 <div id="skills" style="padding: 20px;">
   <h2>Skills</h2>
+  
+  <h3>Languages</h3>
   <div class="skill-item">
     <div class="skill-name">Python</div>
     <div class="skill-bar" data-level="3"></div>
@@ -187,6 +189,52 @@
   <div class="skill-item">
     <div class="skill-name">Shell Scripting</div>
     <div class="skill-bar" data-level="4"></div>
+  </div>
+
+  <h3>CI/CD</h3>
+  <div class="skill-item">
+    <div class="skill-name">GIT</div>
+    <div class="skill-bar" data-level="3.5"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">GitHub</div>
+    <div class="skill-bar" data-level="3"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">Jenkins</div>
+    <div class="skill-bar" data-level="4"></div>
+  </div>
+
+  <h3>Containers/Virtualization</h3>
+  <div class="skill-item">
+    <div class="skill-name">Docker</div>
+    <div class="skill-bar" data-level="3"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">Kubernetes</div>
+    <div class="skill-bar" data-level="2.5"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">VMware</div>
+    <div class="skill-bar" data-level="4"></div>
+  </div>
+
+  <h3>Operating Systems</h3>
+  <div class="skill-item">
+    <div class="skill-name">Red Hat</div>
+    <div class="skill-bar" data-level="4.5"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">CentOS</div>
+    <div class="skill-bar" data-level="4.5"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">Ubuntu</div>
+    <div class="skill-bar" data-level="4.5"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">Windows</div>
+    <div class="skill-bar" data-level="3"></div>
   </div>
 </div>
 
@@ -256,8 +304,12 @@
     color: #333; /* Setting text color to dark for contrast */
   }
 
-  #skills h2 {
+   #skills h2, #skills h3 {
     margin: 0; /* Removing default margin */
+  }
+
+  #skills h3 {
+    margin-top: 20px; /* Adding space between categories */
   }
 
   .skill-item {
@@ -301,12 +353,24 @@
     background: linear-gradient(90deg, #28a745 40%, #ddd 40%);
   }
 
+  .skill-bar[data-level="2.5"] {
+    background: linear-gradient(90deg, #28a745 50%, #ddd 50%);
+  }
+
   .skill-bar[data-level="3"] {
     background: linear-gradient(90deg, #28a745 60%, #ddd 60%);
   }
 
+  .skill-bar[data-level="3.5"] {
+    background: linear-gradient(90deg, #28a745 70%, #ddd 70%);
+  }
+
   .skill-bar[data-level="4"] {
     background: linear-gradient(90deg, #28a745 80%, #ddd 80%);
+  }
+
+  .skill-bar[data-level="4.5"] {
+    background: linear-gradient(90deg, #28a745 90%, #ddd 90%);
   }
 
   .skill-bar[data-level="5"] {
