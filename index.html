@@ -181,62 +181,86 @@
 <div id="skills" style="padding: 20px;">
   <h2>Skills</h2>
   
-  <h3>Languages</h3>
-  <div class="skill-item">
-    <div class="skill-name">Python</div>
-    <div class="skill-bar" data-level="3"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">Shell Scripting</div>
-    <div class="skill-bar" data-level="4"></div>
-  </div>
+  <div class="skill-category">
+    <h3 onclick="toggleVisibility('languages')">Languages</h3>
+    <div class="skill-group" id="languages">
+      <div class="skill-item">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar" data-level="3"></div>
+      </div>  
+      <div class="skill-item">
+            <div class="skill-name">Shell Scripting</div>
+            <div class="skill-bar" data-level="4"></div>
+      </div>
+    </div>
+  </div>   
+  <div class="skill-category">
+    <h3 onclick="toggleVisibility('ci-cd')">CI/CD</h3>
+    <div class="skill-group" id="ci-cd">
+      <div class="skill-item">
+          <div class="skill-name">GIT</div>
+          <div class="skill-bar" data-level="3.5"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">GitHub</div>
+          <div class="skill-bar" data-level="3"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">Jenkins</div>
+          <div class="skill-bar" data-level="4"></div>
+      </div>
+    </div>  
+  </div>    
+  <div class="skill-category">
+    <h3 onclick="toggleVisibility('containers')">Containers/Virtualization</h3>
+    <div class="skill-group" id="containers">
+      <div class="skill-item">
+          <div class="skill-name">Docker</div>
+          <div class="skill-bar" data-level="3"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">Kubernetes</div>
+          <div class="skill-bar" data-level="2.5"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">VMware</div>
+          <div class="skill-bar" data-level="4"></div>
+      </div>
+    </div>  
+  </div>    
 
-  <h3>CI/CD</h3>
-  <div class="skill-item">
-    <div class="skill-name">GIT</div>
-    <div class="skill-bar" data-level="3.5"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">GitHub</div>
-    <div class="skill-bar" data-level="3"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">Jenkins</div>
-    <div class="skill-bar" data-level="4"></div>
-  </div>
-
-  <h3>Containers/Virtualization</h3>
-  <div class="skill-item">
-    <div class="skill-name">Docker</div>
-    <div class="skill-bar" data-level="3"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">Kubernetes</div>
-    <div class="skill-bar" data-level="2.5"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">VMware</div>
-    <div class="skill-bar" data-level="4"></div>
-  </div>
-
-  <h3>Operating Systems</h3>
-  <div class="skill-item">
-    <div class="skill-name">Red Hat</div>
-    <div class="skill-bar" data-level="4.5"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">CentOS</div>
-    <div class="skill-bar" data-level="4.5"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">Ubuntu</div>
-    <div class="skill-bar" data-level="4.5"></div>
-  </div>
-  <div class="skill-item">
-    <div class="skill-name">Windows</div>
-    <div class="skill-bar" data-level="3"></div>
-  </div>
+  <div class="skill-category">
+    <h3 onclick="toggleVisibility('os')">Operating Systems</h3>
+    <div class="skill-group" id="os">
+      <div class="skill-item">
+          <div class="skill-name">Red Hat</div>
+          <div class="skill-bar" data-level="4.5"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">CentOS</div>
+          <div class="skill-bar" data-level="4.5"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">Ubuntu</div>
+          <div class="skill-bar" data-level="4.5"></div>
+      </div>
+      <div class="skill-item">
+          <div class="skill-name">Windows</div>
+          <div class="skill-bar" data-level="3"></div>
+      </div>
+  </div>      
 </div>
+</div>    
+<script>
+  function toggleVisibility(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+</script>    
 
 <style>
   body {
@@ -343,6 +367,14 @@
 
   .skill-bar:hover:before {
     display: block; /* Show on hover */
+  }
+
+  .skill-category {
+    margin-bottom: 20px; /* Space between categories */
+  }
+
+  .skill-group {
+    display: none; /* Hidden by default */
   }
 
   .skill-bar[data-level="1"] {
