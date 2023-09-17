@@ -1,1 +1,87 @@
-Hello Althaf
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-image: url('/image.webp');
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #218838;
+  }
+  .section {
+    margin-bottom: 20px;
+  }
+  .section h2 {
+    font-size: 1.5em;
+  }
+  .chart {
+    display: none;
+  }
+  .chart.active {
+    display: block;
+  }
+</style>
+<title>Althaf Ali Khan (AK)</title>
+</head>
+<body>
+<div class="container">
+  <div class="title">Althaf Ali Khan (AK)</div>
+  <div class="subtitle">Human | Engineer | Linuxian | Devops</div>
+  <button class="button">EXPLORE ME</button>
+
+  <div class="section">
+    <h2>About</h2>
+    <p>I am AK. A Human and a Engineer.</p>
+    <p>Passionate about learning new technologies if I find that as interesting and explore more about it.</p>
+    <p>SRE and Devops Engineer who loves play with Automation and loves pipelines:-)</p>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill" data-skill="Languages" data-rating="Python (3), Shell Scripting (4)">Languages</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelector('.skills').addEventListener('mouseover', function(e) {
+    if (e.target.classList.contains('skill')) {
+      const rating = e.target.getAttribute('data-rating');
+      alert(`Rating: ${rating}`);
+    }
+  });
+</script>
+</body>
+</html>
