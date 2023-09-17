@@ -86,9 +86,9 @@
 
 <div id="about" style="margin-top: 20px;">
   <h2>About</h2>
-  <p>I am AK. A Human and a Engineer.</p>
+  <p>I am Althaf Ali. A Human and an Engineer.</p>
   <p>Passionate about learning new technologies if I find them interesting and exploring more about it.</p>
-  <p>SRE and Devops Engineer who loves to play with automation and adores pipelines :-)</p>
+  <p>SRE and Devops Engineer who loves to play with automation and adores pipelines</p>
 </div>
 
 <style>
@@ -178,9 +178,142 @@
   }
 </style>
 
-<!-- We will add the "Skills" section below -->
+<div id="skills" style="padding: 20px;">
+  <h2>Skills</h2>
+  <div class="skill-item">
+    <div class="skill-name">Python</div>
+    <div class="skill-bar" data-level="3"></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-name">Shell Scripting</div>
+    <div class="skill-bar" data-level="4"></div>
+  </div>
+</div>
 
+<style>
+  body {
+    background-color: #4B5320; /* Army green background */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center; /* Centering the text */
+  }
+  .menu {
+    background-color: #333;
+    overflow: hidden;
+  }
+  .menu a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+  }
+  .title {
+    font-size: 2em;
+    margin-top: 50px;
+  }
+  .subtitle {
+    font-size: 1.5em;
+  }
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0; /* Align it to the right */
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
+  #skills {
+    background-color: white;
+    color: #333; /* Setting text color to dark for contrast */
+  }
 
+  #skills h2 {
+    margin: 0; /* Removing default margin */
+  }
+
+  .skill-item {
+    margin: 20px 0; /* Adding space between skill items */
+  }
+
+  .skill-name {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .skill-bar {
+    width: 100%; /* Set a fixed width or maximum width based on your preference */
+    height: 25px;
+    background-color: #ddd; /* Grey background for the un-filled part */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Relative positioning to place level indicator inside */
+  }
+
+  .skill-bar:before {
+    content: attr(data-level) "/5"; /* Displaying the skill level */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    background-color: #4B5320; /* Background color for the level indicator */
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners for the level indicator */
+    display: none; /* Hide by default */
+  }
+
+  .skill-bar:hover:before {
+    display: block; /* Show on hover */
+  }
+
+  .skill-bar[data-level="1"] {
+    background: linear-gradient(90deg, #28a745 20%, #ddd 20%);
+  }
+
+  .skill-bar[data-level="2"] {
+    background: linear-gradient(90deg, #28a745 40%, #ddd 40%);
+  }
+
+  .skill-bar[data-level="3"] {
+    background: linear-gradient(90deg, #28a745 60%, #ddd 60%);
+  }
+
+  .skill-bar[data-level="4"] {
+    background: linear-gradient(90deg, #28a745 80%, #ddd 80%);
+  }
+
+  .skill-bar[data-level="5"] {
+    background: linear-gradient(90deg, #28a745 100%, #ddd 100%);
+  }
+</style>
+
+<!-- End of HTML -->
 </body>
 </html>
