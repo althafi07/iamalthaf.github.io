@@ -63,7 +63,89 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .explore-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .explore-button:hover {
+    background-color: #218838;
+  }
+  #about {
+    background-color: #333; /* Adding a background to differentiate sections */
+    padding: 20px;
+    color: white; /* Setting the text color to white for better readability */
+  }
+  #about h2 {
+    margin: 0; /* Removing default margin */
+  }
+  #skills {
+    background-color: white;
+    color: #333; /* Setting text color to dark for contrast */
+  }
+   #skills h2, #skills h3 {
+    margin: 0; /* Removing default margin */
+  }
+  #skills h3 {
+    margin-top: 20px; /* Adding space between categories */
+  }
+  .skill-item {
+    margin: 20px 0; /* Adding space between skill items */
+  }
+  .skill-name {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  .skill-bar {
+    width: 100%; /* Set a fixed width or maximum width based on your preference */
+    height: 25px;
+    background-color: #ddd; /* Grey background for the un-filled part */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Relative positioning to place level indicator inside */
+  }
+  .skill-bar:before {
+    content: attr(data-level) "/5"; /* Displaying the skill level */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    background-color: #4B5320; /* Background color for the level indicator */
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners for the level indicator */
+    display: none; /* Hide by default */
+  }
+  .skill-bar:hover:before {
+    display: block; /* Show on hover */
+  }
+  .skill-category {
+    margin-bottom: 20px; /* Space between categories */
+  }
+  .skill-group {
+    display: none; /* Hidden by default */
+  }
+  .skill-bar[data-level="1"] {
+    background: linear-gradient(90deg, #28a745 20%, #ddd 20%);
+  }
+  .skill-bar[data-level="2"] {
+    background: linear-gradient(90deg, #28a745 40%, #ddd 40%);
+  }
+  .skill-bar[data-level="3"] {
+    background: linear-gradient(90deg, #28a745 60%, #ddd 60%);
+  }
+  .skill-bar[data-level="4"] {
+    background: linear-gradient(90deg, #28a745 80%, #ddd 80%);
+  }
+  .skill-bar[data-level="5"] {
+    background: linear-gradient(90deg, #28a745 100%, #ddd 100%);
+  }
 </style>
+</head>
+<body>
 <title>Althaf Ali Khan (AK)</title>
 </head>
 <body>
@@ -90,93 +172,6 @@
   <p>Passionate about learning new technologies if I find them interesting and exploring more about it.</p>
   <p>SRE and Devops Engineer who loves to play with automation and adores pipelines</p>
 </div>
-
-<style>
-  body {
-    background-color: #4B5320; /* Army green background */
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center; /* Centering the text */
-  }
-  .menu {
-    background-color: #333;
-    overflow: hidden;
-  }
-  .menu a {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-  }
-  .title {
-    font-size: 2em;
-    margin-top: 50px;
-  }
-  .subtitle {
-    font-size: 1.5em;
-  }
-  .dropdown {
-    float: right;
-    overflow: hidden;
-  }
-  .dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0; /* Align it to the right */
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .explore-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .explore-button:hover {
-    background-color: #218838;
-  }
-
-  #about {
-    background-color: #333; /* Adding a background to differentiate sections */
-    padding: 20px;
-    color: white; /* Setting the text color to white for better readability */
-  }
-
-  #about h2 {
-    margin: 0; /* Removing default margin */
-  }
-</style>
 
 <div id="skills" style="padding: 20px;">
   <h2>Skills</h2>
@@ -253,163 +248,12 @@
 </div>    
 <script>
   function toggleVisibility(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === "none") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
+    var e = document.getElementById(id);
+    if(e.style.display == 'block')
+      e.style.display = 'none';
+    else
+      e.style.display = 'block';
   }
-</script>    
-
-<style>
-  body {
-    background-color: #4B5320; /* Army green background */
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center; /* Centering the text */
-  }
-  .menu {
-    background-color: #333;
-    overflow: hidden;
-  }
-  .menu a {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-  }
-  .title {
-    font-size: 2em;
-    margin-top: 50px;
-  }
-  .subtitle {
-    font-size: 1.5em;
-  }
-  .dropdown {
-    float: right;
-    overflow: hidden;
-  }
-  .dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0; /* Align it to the right */
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  #skills {
-    background-color: white;
-    color: #333; /* Setting text color to dark for contrast */
-  }
-
-   #skills h2, #skills h3 {
-    margin: 0; /* Removing default margin */
-  }
-
-  #skills h3 {
-    margin-top: 20px; /* Adding space between categories */
-  }
-
-  .skill-item {
-    margin: 20px 0; /* Adding space between skill items */
-  }
-
-  .skill-name {
-    font-size: 1em;
-    margin-bottom: 10px;
-  }
-
-  .skill-bar {
-    width: 100%; /* Set a fixed width or maximum width based on your preference */
-    height: 25px;
-    background-color: #ddd; /* Grey background for the un-filled part */
-    border-radius: 5px; /* Rounded corners */
-    position: relative; /* Relative positioning to place level indicator inside */
-  }
-
-  .skill-bar:before {
-    content: attr(data-level) "/5"; /* Displaying the skill level */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centering the text */
-    background-color: #4B5320; /* Background color for the level indicator */
-    padding: 5px;
-    border-radius: 5px; /* Rounded corners for the level indicator */
-    display: none; /* Hide by default */
-  }
-
-  .skill-bar:hover:before {
-    display: block; /* Show on hover */
-  }
-
-  .skill-category {
-    margin-bottom: 20px; /* Space between categories */
-  }
-
-  .skill-group {
-    display: none; /* Hidden by default */
-  }
-
-  .skill-bar[data-level="1"] {
-    background: linear-gradient(90deg, #28a745 20%, #ddd 20%);
-  }
-
-  .skill-bar[data-level="2"] {
-    background: linear-gradient(90deg, #28a745 40%, #ddd 40%);
-  }
-
-  .skill-bar[data-level="2.5"] {
-    background: linear-gradient(90deg, #28a745 50%, #ddd 50%);
-  }
-
-  .skill-bar[data-level="3"] {
-    background: linear-gradient(90deg, #28a745 60%, #ddd 60%);
-  }
-
-  .skill-bar[data-level="3.5"] {
-    background: linear-gradient(90deg, #28a745 70%, #ddd 70%);
-  }
-
-  .skill-bar[data-level="4"] {
-    background: linear-gradient(90deg, #28a745 80%, #ddd 80%);
-  }
-
-  .skill-bar[data-level="4.5"] {
-    background: linear-gradient(90deg, #28a745 90%, #ddd 90%);
-  }
-
-  .skill-bar[data-level="5"] {
-    background: linear-gradient(90deg, #28a745 100%, #ddd 100%);
-  }
-</style>
-
-<!-- End of HTML -->
+</script>
 </body>
 </html>
