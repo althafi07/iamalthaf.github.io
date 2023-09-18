@@ -101,7 +101,7 @@
 
   .skill-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
   margin-bottom: 20px;
   font-size: 1em;
@@ -115,12 +115,14 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  white-space: nowrap; /* This will prevent text from breaking into multiple lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .skill-category:hover {
   background-color: #e0e0e0;
 }
-
 
   .skill-group {
     display: none;
@@ -217,7 +219,7 @@
   <div class="skill-categories">
     <div class="skill-category" onclick="toggleVisibility('languages')">Languages</div>
     <div class="skill-category" onclick="toggleVisibility('ci-cd')">CI/CD</div>
-    <div class="skill-category" onclick="toggleVisibility('containers/virtualization')">Containers/virtualization</div>
+    <div class="skill-category" onclick="toggleVisibility('containers')">Containers/virtualization</div>
     <div class="skill-category" onclick="toggleVisibility('os')">OS</div>
     <div class="skill-category" onclick="toggleVisibility('networking')">Networking</div>
     <div class="skill-category" onclick="toggleVisibility('network storage')">Network Storage</div>
@@ -269,7 +271,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Containers/virtualization">
+  <div class="skill-group" id="containers">
     <div class="skill-item">
       <div class="skill-name">Docker</div>
       <div class="skill-bar" data-level="3">
@@ -284,7 +286,7 @@
     </div>
   </div>
   
-  <div class="skill-group" id="OS">
+  <div class="skill-group" id="os">
     <div class="skill-item">
       <div class="skill-name">RedHat</div>
       <div class="skill-bar" data-level="3.5">
@@ -311,7 +313,7 @@
     </div>
   </div>
   
-  <div class="skill-group" id="Networking">
+  <div class="skill-group" id="networking">
     <div class="skill-item">
       <div class="skill-name">IP routing</div>
       <div class="skill-bar" data-level="3.5">
@@ -356,7 +358,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Network Storage">
+  <div class="skill-group" id="network storage">
     <div class="skill-item">
       <div class="skill-name">SCSI</div>
       <div class="skill-bar" data-level="3">
@@ -371,7 +373,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Authentication">
+  <div class="skill-group" id="authentication">
     <div class="skill-item">
       <div class="skill-name">LDAP</div>
       <div class="skill-bar" data-level="3">
@@ -380,7 +382,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Webserver">
+  <div class="skill-group" id="webserver">
     <div class="skill-item">
       <div class="skill-name">Apache</div>
       <div class="skill-bar" data-level="3">
@@ -395,7 +397,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Monitoring">
+  <div class="skill-group" id="monitoring">
     <div class="skill-item">
       <div class="skill-name">Splunk</div>
       <div class="skill-bar" data-level="3">
@@ -422,7 +424,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Documenting">
+  <div class="skill-group" id="documenting">
     <div class="skill-item">
       <div class="skill-name">Confluence</div>
       <div class="skill-bar" data-level="3">
@@ -431,7 +433,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Ticketing">
+  <div class="skill-group" id="ticketing">
     <div class="skill-item">
       <div class="skill-name">Jira</div>
       <div class="skill-bar" data-level="3">
@@ -452,7 +454,7 @@
     </div>
  </div>
   
-  <div class="skill-group" id="DB">
+  <div class="skill-group" id="db">
     <div class="skill-item">
       <div class="skill-name">Postgres</div>
       <div class="skill-bar" data-level="3">
@@ -467,7 +469,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="IAAC">
+  <div class="skill-group" id="iaac">
     <div class="skill-item">
       <div class="skill-name">Ansible</div>
       <div class="skill-bar" data-level="3">
@@ -488,7 +490,7 @@
     </div>
  </div>
 
-  <div class="skill-group" id="Cloud">
+  <div class="skill-group" id="cloud">
     <div class="skill-item">
       <div class="skill-name">GCP</div>
       <div class="skill-bar" data-level="3">
@@ -503,7 +505,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Vault">
+  <div class="skill-group" id="vault">
     <div class="skill-item">
       <div class="skill-name">Ansible Vault</div>
       <div class="skill-bar" data-level="3">
@@ -518,7 +520,7 @@
     </div>
   </div>
 
-  <div class="skill-group" id="Artifact Management">
+  <div class="skill-group" id="artifact management">
     <div class="skill-item">
       <div class="skill-name">Jfrog Artifactory</div>
       <div class="skill-bar" data-level="3">
