@@ -100,13 +100,27 @@
   }
 
   .skill-categories {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-size: 1.25em;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.skill-category {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.skill-category:hover {
+  background-color: #e0e0e0;
+}
+
 
   .skill-group {
     display: none;
@@ -203,20 +217,20 @@
   <div class="skill-categories">
     <div class="skill-category" onclick="toggleVisibility('languages')">Languages</div>
     <div class="skill-category" onclick="toggleVisibility('ci-cd')">CI/CD</div>
-    <div class="skill-category" onclick="toggleVisibility('Containers/virtualization')">Containers/virtualization</div>
-    <div class="skill-category" onclick="toggleVisibility('OS')">OS</div>
-    <div class="skill-category" onclick="toggleVisibility('Networking')">Networking</div>
-    <div class="skill-category" onclick="toggleVisibility('Network Storage')">Network Storage</div>
-    <div class="skill-category" onclick="toggleVisibility('Authentication')">Authentication</div>
-    <div class="skill-category" onclick="toggleVisibility('Webserver')">Webserver</div>
-    <div class="skill-category" onclick="toggleVisibility('Monitoring')">Monitoring</div>
-    <div class="skill-category" onclick="toggleVisibility('Documenting')">Documenting</div>
-    <div class="skill-category" onclick="toggleVisibility('Ticketing')">Ticketing</div>
-    <div class="skill-category" onclick="toggleVisibility('DB')">DB</div>
-    <div class="skill-category" onclick="toggleVisibility('IAAC')">IAAC</div>
-    <div class="skill-category" onclick="toggleVisibility('Vault')">Vault</div>
-    <div class="skill-category" onclick="toggleVisibility('Cloud')">Cloud</div>
-    <div class="skill-category" onclick="toggleVisibility('Artifact Management')">Artifact Management</div>
+    <div class="skill-category" onclick="toggleVisibility('containers/virtualization')">Containers/virtualization</div>
+    <div class="skill-category" onclick="toggleVisibility('os')">OS</div>
+    <div class="skill-category" onclick="toggleVisibility('networking')">Networking</div>
+    <div class="skill-category" onclick="toggleVisibility('network storage')">Network Storage</div>
+    <div class="skill-category" onclick="toggleVisibility('suthentication')">Authentication</div>
+    <div class="skill-category" onclick="toggleVisibility('sebserver')">Webserver</div>
+    <div class="skill-category" onclick="toggleVisibility('monitoring')">Monitoring</div>
+    <div class="skill-category" onclick="toggleVisibility('documenting')">Documenting</div>
+    <div class="skill-category" onclick="toggleVisibility('ticketing')">Ticketing</div>
+    <div class="skill-category" onclick="toggleVisibility('db')">DB</div>
+    <div class="skill-category" onclick="toggleVisibility('iaac')">IAAC</div>
+    <div class="skill-category" onclick="toggleVisibility('vault')">Vault</div>
+    <div class="skill-category" onclick="toggleVisibility('cloud')">Cloud</div>
+    <div class="skill-category" onclick="toggleVisibility('artifact management')">Artifact Management</div>
   </div>
 
   <div class="skill-group" id="languages">
