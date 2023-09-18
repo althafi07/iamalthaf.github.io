@@ -185,6 +185,50 @@
   .skill-bar[data-level="5"] .skill-level {
     width: 100%;
   }
+
+  #experience {
+  margin-top: 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.year {
+  position: relative;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.year:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
+  
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 </style>
 </head>
 <body>
@@ -528,7 +572,30 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
+
+<div id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="year" data-detail="Engineering Studies">
+      2006 - 2010
+      <div class="tooltip">Engineering Studies</div>
+    </div>
+    <div class="year" data-detail="Senior Specialist at HCL Technologies">
+      2015 - 2019
+      <div class="tooltip">Senior Specialist at HCL Technologies</div>
+    </div>
+    <div class="year" data-detail="Senior Software Engineer at BCT">
+      2019 - 2022
+      <div class="tooltip">Senior Software Engineer at BCT (until Jan 2022)</div>
+    </div>
+    <div class="year" data-detail="Sr. DevOps Engineer at Tesla">
+      2022 - Present
+      <div class="tooltip">Sr. DevOps Engineer at Tesla (from Feb 2022)</div>
+    </div>
+  </div>
+</div>
+  
 
 <script>
   function toggleVisibility(id) {
