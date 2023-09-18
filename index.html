@@ -5,17 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Althaf Ali Khan (AK)</title>
 <style>
-  body {
-    font-family: 'Arial, sans-serif';
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-  }
-
   .menu {
     background-color: #333;
     overflow: hidden;
-    margin-bottom: 20px;
   }
 
   .menu .dropdown {
@@ -58,27 +50,27 @@
     display: block;
   }
 
-  #home, #about, #skills {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
   }
 
   #home {
     text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
   #home .title {
     font-size: 2em;
-    margin-top: 20px;
   }
 
   #home .subtitle {
     font-size: 1.5em;
-    margin-bottom: 20px;
   }
 
   #home .explore-button {
@@ -91,24 +83,34 @@
     cursor: pointer;
   }
 
+  #about, #skills {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
   #about h2, #skills h2 {
-    margin-top: 0;
+    text-align: center;
   }
 
-  .skill-category {
-    margin-bottom: 20px;
+  #about p {
+    text-align: center;
   }
 
-  .skill-category h3 {
+  .skill-categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 1.25em;
   }
 
   .skill-group {
     display: none;
-    padding-left: 20px;
-    text-align: left;
+    text-align: center;
   }
 
   .skill-item {
@@ -122,6 +124,8 @@
 
   .skill-bar {
     width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
     height: 25px;
     background-color: #ddd;
     border-radius: 5px;
@@ -195,58 +199,60 @@
 
 <div id="skills">
   <h2>Skills</h2>
-  
-  <!-- Skill Categories -->
-  <div class="skill-category">
-    <h3 onclick="toggleVisibility('languages')">Languages</h3>
-    <div class="skill-group" id="languages">
-      <div class="skill-item">
-        <div class="skill-name">Python</div>
-        <div class="skill-bar" data-level="3">
-          <div class="skill-level"></div>
-        </div>
+
+  <div class="skill-categories">
+    <div class="skill-category" onclick="toggleVisibility('languages')">Languages</div>
+    <div class="skill-category" onclick="toggleVisibility('ci-cd')">CI/CD</div>
+    <div class="skill-category" onclick="toggleVisibility('devops')">DevOps</div>
+  </div>
+
+  <div class="skill-group" id="languages">
+    <div class="skill-item">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar" data-level="3">
+        <div class="skill-level"></div>
       </div>
-      <div class="skill-item">
-        <div class="skill-name">Shell Scripting</div>
-        <div class="skill-bar" data-level="4">
-          <div class="skill-level"></div>
-        </div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Shell Scripting</div>
+      <div class="skill-bar" data-level="4">
+        <div class="skill-level"></div>
       </div>
     </div>
   </div>
 
-  <div class="skill-category">
-    <h3 onclick="toggleVisibility('ci-cd')">CI/CD</h3>
-    <div class="skill-group" id="ci-cd">
-      <div class="skill-item">
-        <div class="skill-name">GIT</div>
-        <div class="skill-bar" data-level="3.5">
-          <div class="skill-level"></div>
-        </div>
+  <div class="skill-group" id="ci-cd">
+    <div class="skill-item">
+      <div class="skill-name">GIT</div>
+      <div class="skill-bar" data-level="3.5">
+        <div class="skill-level"></div>
       </div>
-      <div class="skill-item">
-        <div class="skill-name">Jenkins</div>
-        <div class="skill-bar" data-level="3">
-          <div class="skill-level"></div>
-        </div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">GitHub</div>
+      <div class="skill-bar" data-level="3">
+        <div class="skill-level"></div>
+      </div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Jenkins</div>
+      <div class="skill-bar" data-level="3">
+        <div class="skill-level"></div>
       </div>
     </div>
   </div>
 
-  <div class="skill-category">
-    <h3 onclick="toggleVisibility('devops')">DevOps</h3>
-    <div class="skill-group" id="devops">
-      <div class="skill-item">
-        <div class="skill-name">Docker</div>
-        <div class="skill-bar" data-level="3">
-          <div class="skill-level"></div>
-        </div>
+  <div class="skill-group" id="devops">
+    <div class="skill-item">
+      <div class="skill-name">Docker</div>
+      <div class="skill-bar" data-level="3">
+        <div class="skill-level"></div>
       </div>
-      <div class="skill-item">
-        <div class="skill-name">Kubernetes</div>
-        <div class="skill-bar" data-level="2.5">
-          <div class="skill-level"></div>
-        </div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Kubernetes</div>
+      <div class="skill-bar" data-level="2">
+        <div class="skill-level"></div>
       </div>
     </div>
   </div>
@@ -258,10 +264,13 @@
     if (element.style.display === "block") {
       element.style.display = "none";
     } else {
+      var groups = document.querySelectorAll('.skill-group');
+      groups.forEach(function(group) {
+        group.style.display = "none";
+      });
       element.style.display = "block";
     }
   }
 </script>
-
 </body>
 </html>
