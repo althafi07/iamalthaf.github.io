@@ -4,151 +4,138 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body {
-    background-color: #4B5320; /* Army green background */
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center; /* Centering the text */
-  }
   .menu {
     background-color: #333;
     overflow: hidden;
   }
-  .menu a {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-  }
-  .title {
-    font-size: 2em;
-    margin-top: 50px;
-  }
-  .subtitle {
-    font-size: 1.5em;
-  }
-  .dropdown {
-    float: right;
+
+  .menu .dropdown {
+    float: left;
     overflow: hidden;
   }
-  .dropdown .dropbtn {
-    font-size: 16px;    
+
+  .menu .dropdown .dropbtn {
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit;
-    margin: 0;
   }
-  .dropdown-content {
+
+  .menu .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    right: 0; /* Align it to the right */
     z-index: 1;
   }
-  .dropdown-content a {
+
+  .menu .dropdown-content a {
+    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: left;
   }
-  .dropdown:hover .dropdown-content {
+
+  .menu .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .menu .dropdown:hover .dropdown-content {
     display: block;
   }
-  .explore-button {
+
+  #home .title {
+    font-size: 2em;
     margin-top: 20px;
+  }
+
+  #home .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  #home .explore-button {
     padding: 10px 20px;
     font-size: 1em;
-    background-color: #28a745;
-    color: white;
+    background-color: #000;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
-  .explore-button:hover {
-    background-color: #218838;
+
+  .skill-category {
+    margin-bottom: 20px;
   }
-  #about {
-    background-color: #333; /* Adding a background to differentiate sections */
-    padding: 20px;
-    color: white; /* Setting the text color to white for better readability */
+
+  .skill-category h3 {
+    cursor: pointer;
   }
-  #about h2 {
-    margin: 0; /* Removing default margin */
+
+  .skill-group {
+    display: none;
+    padding-left: 20px;
   }
-  #skills {
-    background-color: white;
-    color: #333; /* Setting text color to dark for contrast */
-  }
-   #skills h2, #skills h3 {
-    margin: 0; /* Removing default margin */
-  }
-  #skills h3 {
-    margin-top: 20px; /* Adding space between categories */
-  }
+
   .skill-item {
-    margin: 20px 0; /* Adding space between skill items */
-  }
-  .skill-name {
-    font-size: 1em;
     margin-bottom: 10px;
   }
+
+  .skill-name {
+    margin-bottom: 5px;
+  }
+
   .skill-bar {
-    width: 100%; /* Set a fixed width or maximum width based on your preference */
+    width: 100%;
     height: 25px;
-    background-color: #ddd; /* Grey background for the un-filled part */
-    border-radius: 5px; /* Rounded corners */
-    position: relative; /* Relative positioning to place level indicator inside */
+    background-color: #ddd;
+    border-radius: 5px;
+    position: relative;
   }
-  .skill-bar:before {
-    content: attr(data-level) "/5"; /* Displaying the skill level */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centering the text */
-    background-color: #4B5320; /* Background color for the level indicator */
-    padding: 5px;
-    border-radius: 5px; /* Rounded corners for the level indicator */
-    display: none; /* Hide by default */
+
+  .skill-level {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #28a745;
   }
-  .skill-bar:hover:before {
-    display: block; /* Show on hover */
+
+  .skill-bar[data-level="1"] .skill-level {
+    width: 20%;
   }
-  .skill-category {
-    margin-bottom: 20px; /* Space between categories */
+  
+  .skill-bar[data-level="2"] .skill-level {
+    width: 40%;
   }
-  .skill-group {
-    display: none; /* Hidden by default */
+  
+  .skill-bar[data-level="3"] .skill-level {
+    width: 60%;
   }
-  .skill-bar[data-level="1"] {
-    background: linear-gradient(90deg, #28a745 20%, #ddd 20%);
+  
+  .skill-bar[data-level="3.5"] .skill-level {
+    width: 70%;
   }
-  .skill-bar[data-level="2"] {
-    background: linear-gradient(90deg, #28a745 40%, #ddd 40%);
+  
+  .skill-bar[data-level="4"] .skill-level {
+    width: 80%;
   }
-  .skill-bar[data-level="3"] {
-    background: linear-gradient(90deg, #28a745 60%, #ddd 60%);
+  
+  .skill-bar[data-level="4.5"] .skill-level {
+    width: 90%;
   }
-  .skill-bar[data-level="4"] {
-    background: linear-gradient(90deg, #28a745 80%, #ddd 80%);
-  }
-  .skill-bar[data-level="5"] {
-    background: linear-gradient(90deg, #28a745 100%, #ddd 100%);
+  
+  .skill-bar[data-level="5"] .skill-level {
+    width: 100%;
   }
 </style>
 </head>
 <body>
+
 <title>Althaf Ali Khan (AK)</title>
-</head>
-<body>
 
 <div class="menu">
   <div class="dropdown">
@@ -160,6 +147,7 @@
     </div>
   </div>
 </div>
+
 <div id="home">
   <div class="title">Althaf Ali Khan (AK)</div>
   <div class="subtitle">Human | Engineer | Linuxian | Devops</div>
@@ -172,7 +160,6 @@
   <p>Passionate about learning new technologies if I find them interesting and exploring more about it.</p>
   <p>SRE and Devops Engineer who loves to play with automation and adores pipelines</p>
 </div>
-
 <div id="skills" style="padding: 20px;">
   <h2>Skills</h2>
   
@@ -180,49 +167,65 @@
     <h3 onclick="toggleVisibility('languages')">Languages</h3>
     <div class="skill-group" id="languages">
       <div class="skill-item">
-            <div class="skill-name">Python</div>
-            <div class="skill-bar" data-level="3"></div>
+        <div class="skill-name">Python</div>
+        <div class="skill-bar" data-level="3">
+          <div class="skill-level"></div>
+        </div>
       </div>  
       <div class="skill-item">
-            <div class="skill-name">Shell Scripting</div>
-            <div class="skill-bar" data-level="4"></div>
+        <div class="skill-name">Shell Scripting</div>
+        <div class="skill-bar" data-level="4">
+          <div class="skill-level"></div>
+        </div>
       </div>
     </div>
-  </div>   
+  </div>  
   <div class="skill-category">
     <h3 onclick="toggleVisibility('ci-cd')">CI/CD</h3>
     <div class="skill-group" id="ci-cd">
       <div class="skill-item">
           <div class="skill-name">GIT</div>
           <div class="skill-bar" data-level="3.5"></div>
+            <div class="skill-level"></div>
       </div>
+    </div>  
       <div class="skill-item">
           <div class="skill-name">GitHub</div>
           <div class="skill-bar" data-level="3"></div>
+            <div class="skill-level"></div>
       </div>
+    </div>
       <div class="skill-item">
           <div class="skill-name">Jenkins</div>
           <div class="skill-bar" data-level="4"></div>
+            <div class="skill-level"></div>
       </div>
     </div>  
-  </div>    
+  </div> 
+  </div>
   <div class="skill-category">
     <h3 onclick="toggleVisibility('containers')">Containers/Virtualization</h3>
     <div class="skill-group" id="containers">
       <div class="skill-item">
           <div class="skill-name">Docker</div>
           <div class="skill-bar" data-level="3"></div>
+            <div class="skill-level"></div>
+      </div>
       </div>
       <div class="skill-item">
           <div class="skill-name">Kubernetes</div>
           <div class="skill-bar" data-level="2.5"></div>
+            <div class="skill-level"></div>
       </div>
+    </div>
       <div class="skill-item">
           <div class="skill-name">VMware</div>
           <div class="skill-bar" data-level="4"></div>
+            <div class="skill-level"></div>
       </div>
     </div>  
-  </div>    
+  </div>
+  </div>
 
   <div class="skill-category">
     <h3 onclick="toggleVisibility('os')">Operating Systems</h3>
@@ -230,22 +233,30 @@
       <div class="skill-item">
           <div class="skill-name">Red Hat</div>
           <div class="skill-bar" data-level="4.5"></div>
+            <div class="skill-level"></div>
+      </div>
       </div>
       <div class="skill-item">
           <div class="skill-name">CentOS</div>
           <div class="skill-bar" data-level="4.5"></div>
+            <div class="skill-level"></div>
       </div>
+    </div>
       <div class="skill-item">
           <div class="skill-name">Ubuntu</div>
           <div class="skill-bar" data-level="4.5"></div>
+            <div class="skill-level"></div>
       </div>
+  </div>
       <div class="skill-item">
           <div class="skill-name">Windows</div>
           <div class="skill-bar" data-level="3"></div>
+            <div class="skill-level"></div>
       </div>
   </div>      
 </div>
-</div>    
+</div> 
+  </div>
 <script>
   function toggleVisibility(id) {
     var e = document.getElementById(id);
