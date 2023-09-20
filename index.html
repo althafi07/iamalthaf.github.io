@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Althaf Ali Khan (AK)</title>
 <style>
   .menu {
@@ -231,375 +232,399 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #002366;
+    color: #FFFFFF;
+}
+
+#home {
+    background-color: #E0F7FA;
+}
+
+#about {
+    background-color: #E0F7DC;
+}
+
+#skills {
+    background-color: #FFF9C4;
+}
+
+.skill-bar {
+    background-color: #BDBDBD;
+}
+
+.skill-level {
+    background-color: #4CAF50;
+}
+
+#experience {
+    background-color: #FCE4EC;
+}
+
+footer {
+    background-color: #002366;
+    color: #FFFFFF;
+}
 </style>
 </head>
 <body>
-
 <div class="menu">
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-    </div>
-  </div>
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact me">Contact Me</a>
 </div>
-
+</div>
+</div>
 <div id="home">
-  <div class="title">Althaf Ali Khan (AK)</div>
-  <div class="subtitle">Human | Engineer | Linuxian | Devops</div>
+<div class="title">Althaf Ali Khan (AK)</div>
+<div class="subtitle">Human | Engineer | Linuxian | Devops</div>
 </div>
-
 <div id="about">
-  <h2>About</h2>
-  <p>I am Althaf Ali. A Human and an Engineer.</p>
-  <p>Passionate about learning new technologies if I find them interesting and exploring more about it.</p>
-  <p>SRE and Devops Engineer who loves to play with automation and adores pipelines</p>
+<h2>About</h2>
+<p>I am Althaf Ali. A Human and an Engineer.</p>
+<p>Passionate about learning new technologies if I find them interesting and exploring more about it.</p>
+<p>SRE and Devops Engineer who loves to play with automation and adores pipelines</p>
 </div>
-
 <div id="skills">
-  <h2>Skills</h2>
-
-  <div class="skill-categories">
-    <div class="skill-category" onclick="toggleVisibility('languages')">Languages</div>
-    <div class="skill-category" onclick="toggleVisibility('ci-cd')">CI/CD</div>
-    <div class="skill-category" onclick="toggleVisibility('containers')">Containers/virtualization</div>
-    <div class="skill-category" onclick="toggleVisibility('os')">OS</div>
-    <div class="skill-category" onclick="toggleVisibility('networking')">Networking</div>
-    <div class="skill-category" onclick="toggleVisibility('network storage')">Network Storage</div>
-    <div class="skill-category" onclick="toggleVisibility('authentication')">Authentication</div>
-    <div class="skill-category" onclick="toggleVisibility('webserver')">Webserver</div>
-    <div class="skill-category" onclick="toggleVisibility('monitoring')">Monitoring</div>
-    <div class="skill-category" onclick="toggleVisibility('documenting')">Documenting</div>
-    <div class="skill-category" onclick="toggleVisibility('ticketing')">Ticketing</div>
-    <div class="skill-category" onclick="toggleVisibility('db')">DB</div>
-    <div class="skill-category" onclick="toggleVisibility('iaac')">IAAC</div>
-    <div class="skill-category" onclick="toggleVisibility('vault')">Vault</div>
-    <div class="skill-category" onclick="toggleVisibility('cloud')">Cloud</div>
-    <div class="skill-category" onclick="toggleVisibility('artifact management')">Artifact Management</div>
-  </div>
-
-  <div class="skill-group" id="languages">
-    <div class="skill-item">
-      <div class="skill-name">Python</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Shell Scripting</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="ci-cd">
-    <div class="skill-item">
-      <div class="skill-name">GIT</div>
-      <div class="skill-bar" data-level="3.5">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">GitHub</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Jenkins</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="containers">
-    <div class="skill-item">
-      <div class="skill-name">Docker</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Kubernetes</div>
-      <div class="skill-bar" data-level="2">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="skill-group" id="os">
-    <div class="skill-item">
-      <div class="skill-name">RedHat</div>
-      <div class="skill-bar" data-level="3.5">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Centos</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Ubuntu</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Windows</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="skill-group" id="networking">
-    <div class="skill-item">
-      <div class="skill-name">IP routing</div>
-      <div class="skill-bar" data-level="3.5">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">NAT</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">TCP/IP</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Firewall</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">DNS</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">DHCP</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">NTP</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="network storage">
-    <div class="skill-item">
-      <div class="skill-name">SCSI</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">NAS(NFS/CIFS)</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="authentication">
-    <div class="skill-item">
-      <div class="skill-name">LDAP</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="webserver">
-    <div class="skill-item">
-      <div class="skill-name">Apache</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Nginx</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="monitoring">
-    <div class="skill-item">
-      <div class="skill-name">Splunk</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Prometheus</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">AlertManager</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Grafana</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="documenting">
-    <div class="skill-item">
-      <div class="skill-name">Confluence</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="ticketing">
-    <div class="skill-item">
-      <div class="skill-name">Jira</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">ServiceNow</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">BMC Remedy</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
- </div>
-  
-  <div class="skill-group" id="db">
-    <div class="skill-item">
-      <div class="skill-name">Postgres</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">MySQL</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="iaac">
-    <div class="skill-item">
-      <div class="skill-name">Ansible</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Terraform</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">AWS CDK</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
- </div>
-
-  <div class="skill-group" id="cloud">
-    <div class="skill-item">
-      <div class="skill-name">GCP</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">AWS</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="vault">
-    <div class="skill-item">
-      <div class="skill-name">Ansible Vault</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Hashicorp Vault</div>
-      <div class="skill-bar" data-level="4">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="skill-group" id="artifact management">
-    <div class="skill-item">
-      <div class="skill-name">Jfrog Artifactory</div>
-      <div class="skill-bar" data-level="3">
-        <div class="skill-level"></div>
-      </div>
-    </div>
-  </div>
+<h2>Skills</h2>
+<div class="skill-categories">
+<div class="skill-category" onclick="toggleVisibility('languages')">Languages</div>
+<div class="skill-category" onclick="toggleVisibility('ci-cd')">CI/CD</div>
+<div class="skill-category" onclick="toggleVisibility('containers')">Containers/virtualization</div>
+<div class="skill-category" onclick="toggleVisibility('os')">OS</div>
+<div class="skill-category" onclick="toggleVisibility('networking')">Networking</div>
+<div class="skill-category" onclick="toggleVisibility('network storage')">Network Storage</div>
+<div class="skill-category" onclick="toggleVisibility('authentication')">Authentication</div>
+<div class="skill-category" onclick="toggleVisibility('webserver')">Webserver</div>
+<div class="skill-category" onclick="toggleVisibility('monitoring')">Monitoring</div>
+<div class="skill-category" onclick="toggleVisibility('documenting')">Documenting</div>
+<div class="skill-category" onclick="toggleVisibility('ticketing')">Ticketing</div>
+<div class="skill-category" onclick="toggleVisibility('db')">DB</div>
+<div class="skill-category" onclick="toggleVisibility('iaac')">IAAC</div>
+<div class="skill-category" onclick="toggleVisibility('vault')">Vault</div>
+<div class="skill-category" onclick="toggleVisibility('cloud')">Cloud</div>
+<div class="skill-category" onclick="toggleVisibility('artifact management')">Artifact Management</div>
 </div>
-
+<div class="skill-group" id="languages">
+<div class="skill-item">
+<div class="skill-name">Python</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Shell Scripting</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="ci-cd">
+<div class="skill-item">
+<div class="skill-name">GIT</div>
+<div class="skill-bar" data-level="3.5">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">GitHub</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Jenkins</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="containers">
+<div class="skill-item">
+<div class="skill-name">Docker</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Kubernetes</div>
+<div class="skill-bar" data-level="2">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="os">
+<div class="skill-item">
+<div class="skill-name">RedHat</div>
+<div class="skill-bar" data-level="3.5">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Centos</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Ubuntu</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Windows</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="networking">
+<div class="skill-item">
+<div class="skill-name">IP routing</div>
+<div class="skill-bar" data-level="3.5">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">NAT</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">TCP/IP</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Firewall</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">DNS</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">DHCP</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">NTP</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="network storage">
+<div class="skill-item">
+<div class="skill-name">SCSI</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">NAS(NFS/CIFS)</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="authentication">
+<div class="skill-item">
+<div class="skill-name">LDAP</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="webserver">
+<div class="skill-item">
+<div class="skill-name">Apache</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Nginx</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="monitoring">
+<div class="skill-item">
+<div class="skill-name">Splunk</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Prometheus</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">AlertManager</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Grafana</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="documenting">
+<div class="skill-item">
+<div class="skill-name">Confluence</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="ticketing">
+<div class="skill-item">
+<div class="skill-name">Jira</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">ServiceNow</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">BMC Remedy</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="db">
+<div class="skill-item">
+<div class="skill-name">Postgres</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">MySQL</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="iaac">
+<div class="skill-item">
+<div class="skill-name">Ansible</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Terraform</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">AWS CDK</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="cloud">
+<div class="skill-item">
+<div class="skill-name">GCP</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">AWS</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="vault">
+<div class="skill-item">
+<div class="skill-name">Ansible Vault</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+<div class="skill-item">
+<div class="skill-name">Hashicorp Vault</div>
+<div class="skill-bar" data-level="4">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+<div class="skill-group" id="artifact management">
+<div class="skill-item">
+<div class="skill-name">Jfrog Artifactory</div>
+<div class="skill-bar" data-level="3">
+<div class="skill-level"></div>
+</div>
+</div>
+</div>
+</div>
 <div id="experience" style="text-align: center;">
-  <h2>Experience</h2>
-  <div class="timeline">
-    <div class="year" data-detail="Engineering Studies">
+<h2>Experience</h2>
+<div class="timeline">
+<div class="year" data-detail="Engineering Studies">
       2006 - 2010
-      <div class="tooltip">Bachelors in Engineering</div>
-    </div>
-    <div class="year" data-detail="Senior Specialist at HCL Technologies">
-      2015 - 2019
-      <div class="tooltip">Senior Specialist at HCL Technologies</div>
-    </div>
-    <div class="year" data-detail="Senior Software Engineer at BCT">
-      2019 - 2022
-      <div class="tooltip">Senior Software Engineer at BCT</div>
-    </div>
-    <div class="year" data-detail="Sr. DevOps Engineer at Tesla">
-      2022 - Present
-      <div class="tooltip">Sr. DevOps Engineer at Tesla (from Feb 2022)</div>
-    </div>
-  </div>
+      <div class="tooltip">Bachelor of Engineering - Electronics and Communication Engineering</div>
 </div>
-
-  
-
+<div class="year" data-detail="Senior Specialist at HCL Technologies - Chennai, India">
+      2015 - 2019
+      <div class="tooltip">Senior Specialist at HCL Technologies - Chennai, India</div>
+</div>
+<div class="year" data-detail="Senior Software Engineer at BCT - Chennai, India">
+      2019 - 2022
+      <div class="tooltip">Senior Software Engineer at BCT - Chennai, India</div>
+</div>
+<div class="year" data-detail="Sr. DevOps Engineer at Tesla - Berlin, Germany">
+      2022 - Present
+      <div class="tooltip">Sr. DevOps Engineer at Tesla - Berlin, Germany</div>
+</div>
+</div>
+</div>
 <script>
   function toggleVisibility(id) {
     var element = document.getElementById(id);
@@ -614,5 +639,18 @@
     }
   }
 </script>
-</body>
+<section id="other-interests">
+<div style="text-align: center; padding: 20px; background-color: #E1F5FE; margin: 20px; border-radius: 10px;">
+<h2>Other Interests</h2>
+<p>Family | Super Hero Movies | Video Games | Tech Blogs | New Technologies | Bike Ride</p>
+</div>
+</section><section id="contact">
+<div style="text-align: center; padding: 20px; background-color: #E0F7DC; margin: 20px; border-radius: 10px;">
+<h2>Contact Me</h2>
+<p>Althaf Ali</p>
+<p>Berlin, Germany</p>
+<p><a href="mailto:althafi07@gmail.com">althafi07@gmail.com</a></p>
+<p><a href="https://www.linkedin.com/in/althaf-ali-38595846" target="_blank"><img alt="LinkedIn" src="https://image.shutterstock.com/image-vector/linkedin-icon-logo-type-260nw-1936921197.jpg" style="width: 30px; vertical-align: middle;"/></a></p>
+</div>
+</section></body>
 </html>
